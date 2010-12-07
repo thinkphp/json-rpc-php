@@ -1,7 +1,7 @@
 JSON-RPC-PHP
 ------------
 
-The trated themes require the knowledge of the (specification of the JSON-RPC 1.0 protocolor)[http://json-rpc.org/wiki/specification].
+The trated themes require the knowledge of the [specification of the JSON-RPC 1.0 protocolor](http://json-rpc.org/wiki/specification).
 
 ## class jsonRPCServer
 
@@ -9,7 +9,7 @@ The ``jsonRPCServer`` class contains only one static method ``jsonRPCServer::han
 
 ### Syntax:
 
-boolean ``jsonRPCServer::handle(object $object)``
+``boolean jsonRPCServer::handle(object $object)``
 
 Collect a valid JSON-RPC request and search the appropriate method in object, using the request's parameters as method parameters. The response is given as JSON-RPC response.
 The request is valid if it is a POST request and if it has a ``content-type: applicatin/json``. Either if the request if invalid or if it a notification, no response will be given to the JSON-RPC client.
@@ -90,8 +90,8 @@ __call() converts it in the JSON-RPC method with same name. The parameters also 
 
 ##### Arguments:
 
-``$method`` (*String*) - the name of the remote required method.
-``$params`` (*Array*) - the parameters set packaged as an array for remote method.
+* ``$method`` (*String*) - the name of the remote required method.
+* ``$params`` (*Array*) - the parameters set packaged as an array for remote method.
 
 #### Return:
 
