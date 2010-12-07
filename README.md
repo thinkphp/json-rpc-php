@@ -20,7 +20,7 @@ Traditionally, the most common tools to implement RPC techniques are or have bee
 However, none of these seems to be enough general to be used easly in different environements. The packaging appear hard to read for humans because the complex
 encapsulations and the ``strong typing`` makes the protocols hard for the ``weak typing`` programming languages, like PHP.
 
-In the latest years, a new technology evolved and become stable, very interesting for encapsulation of complex data in a light logic and a simple format: (JSON](http://json.org/).
+In the latest years, a new technology evolved and become stable, very interesting for encapsulation of complex data in a light logic and a simple format: [JSON](http://json.org/).
 
 ``JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate``.
 
