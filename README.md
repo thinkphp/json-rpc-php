@@ -7,12 +7,12 @@ The JSON-RPC-PHP classes usage is extremely simple and preserve the JSON spirit.
 
 ## Introduction
 
-Interoperability is a property referring to the ability of diverse systems and organizations to work together (inter-operate).Alors, the term
+``Interoperability`` is a property referring to the ability of diverse systems and organizations to work together (inter-operate).Alors, the term
 iteroperability is used to describe the capability of different programs to exchange data via a common set of exchange formats, to
 read and write the same file formats, and  to use the same protocols. According to ISO/IEC 2382, interoperability is defined as follows: 
-``The capability to communicate, execute programs, or transfer data among various functional units in a manner that requires the user to have little or no knowledge of the unique characteristics of those unites.``.
+"The capability to communicate, execute programs, or transfer data among various functional units in a manner that requires the user to have little or no knowledge of the unique characteristics of those unites".
 
-Remote procedure call (RPC) is a technology that allows a computer program to cause a subroutine or procedure to execute in 
+``Remote procedure call (RPC)`` is a technology that allows a computer program to cause a subroutine or procedure to execute in 
 another address space (commonly on another computer on a shared network) without the programmer explicitly coding the details
 for this remote interaction.
 
