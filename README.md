@@ -1,7 +1,7 @@
 JSON-RPC-PHP
 -------------------------
 
-This is a couple of classes written in PHP implementing respectively client and server functionalities of the (JSON-RPC)[http://json-rpc.org/] protocol.
+This is a couple of classes written in PHP implementing respectively client and server functionalities of the [JSON-RPC](http://json-rpc.org/) protocol.
 The goal of the project is the full incapsulation of the JSON-RPC approach inside a PHP application. Via these classes, it becomes possible to offer the network the methods of each one's own classes as RPC services and enjoy RPC services exactly as if they were local objects.
 The JSON-RPC-PHP classes usage is extremely simple and preserve the JSON spirit.
 
