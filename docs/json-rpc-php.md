@@ -41,9 +41,9 @@ The JSON-RPC protocol contains a simple and full management system rightly to th
 
 The ``jsonRPCClient`` contains three public methods:
 
-* ``jsonRPCClient::__construct()`` - the constructor of client class.
-* ``jsonRPCClient::__call()`` - forwarding the requests to the JSON-RPC server
-* ``jsonRPCClient::setRPCNotification()`` - to establish whether the requests are normal requests or notifications.
+* ``jsonRPCClient::__construct($url,$bool)`` - the constructor of client class.
+* ``jsonRPCClient::__call($params)`` - forwarding the requests to the JSON-RPC server
+* ``jsonRPCClient::setRPCNotification($bool)`` - to establish whether the requests are normal requests or notifications.
 
 
 ### Method jsonRPCClient::__construct() 
@@ -116,7 +116,7 @@ request not coresponding to any explicitely declared method of the class and man
 In this way, the magic method ``__call()`` charges on itself the requests and acts as a proxy to the JSON-RPC server.
 
 
-### Method jsonRPCClient::setRPCNotification()
+### Method jsonRPCClient::setRPCNotification($bool)
 
 Sets the internal state of the object, to determine whether the requests are sent as normal requests or notifications.
 
