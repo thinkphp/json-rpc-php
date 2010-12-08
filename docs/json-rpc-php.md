@@ -7,20 +7,19 @@ The trated themes require the knowledge of the [specification of the JSON-RPC 1.
 
 The ``jsonRPCServer`` class contains only one static method ``public static function handle($obj)``, responding to the JSON-RPC requests.
 
-### Syntax:
+### Description:
 
-    <?php
     boolean jsonRPCServer::handle(object $object)
-    ?>
+
 
 Collect a valid JSON-RPC request and search the appropriate method in object, using the request's parameters as method parameters. The response is given as JSON-RPC response.
 The request is valid if it is a POST request and if it has a ``content-type: applicatin/json``. Either if the request if invalid or if it a notification, no response will be given to the JSON-RPC client.
 
-#### Arguments:
+#### Paramters:
 
 * ``$object`` (*Object*) - the object whom the JSON-RPC request will be forwarded to.
 
-#### Returns:
+#### Return values:
 
 * ``boolean`` returns ``TRUE`` if the ``JSON-RPC`` request is well-formated (i.e. a POST request with ``content-type: application/json``). Otherwise, returns  ``FALSE`` to the main program and don't give a response to the JSON-RPC client.
 
