@@ -111,9 +111,9 @@ Returns the structured value given by the called method. If the method is called
 
 #### Note:
 
-Keep in mind the example: the __call() method isn't called explicitely. Instead, methods that aren't between the explicitely declared methods of the class are called. These are the JSON-RPC server's methods. __call() method collect  every method
+Keep in mind the example: the ``__call()`` method isn't called explicitely. Instead, methods that aren't between the explicitely declared methods of the class are called. These are the JSON-RPC server's methods. ``__call()`` method collect  every method
 request not coresponding to any explicitely declared method of the class and manage it as JSON-RPC request. The parameters too are given as the JSON-RPC method requires, where __call() will package them in an array.
-In this way, the magic method __call() charges on itself the requests and acts as a proxy to the JSON-RPC server.
+In this way, the magic method ``__call()`` charges on itself the requests and acts as a proxy to the JSON-RPC server.
 
 
 ### method jsonRPCClient->setRPCNotifications()
