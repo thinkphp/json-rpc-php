@@ -9,7 +9,9 @@ The ``jsonRPCServer`` class contains only one static method ``public static func
 
 ### Syntax:
 
-``boolean jsonRPCServer::handle(object $object)``
+    <?php
+    boolean jsonRPCServer::handle(object $object)
+    ?>
 
 Collect a valid JSON-RPC request and search the appropriate method in object, using the request's parameters as method parameters. The response is given as JSON-RPC response.
 The request is valid if it is a POST request and if it has a ``content-type: applicatin/json``. Either if the request if invalid or if it a notification, no response will be given to the JSON-RPC client.
