@@ -5,7 +5,7 @@ The trated themes require the knowledge of the [specification of the JSON-RPC 1.
 
 ## class jsonRPCServer
 
-The ``jsonRPCServer`` class contains only one public static method ``public static function handle($obj)``, responding to the JSON-RPC requests.
+The ``jsonRPCServer`` class contains only one static method ``public static function handle($obj)``, responding to the JSON-RPC requests.
 
 ### Syntax:
 
@@ -46,7 +46,7 @@ The ``jsonRPCClient`` contains three public methods:
 * ``jsonRPCClient::setRPCNotification($bool)`` - to establish whether the requests are normal requests or notifications.
 
 
-### Method jsonRPCClient::__construct() 
+### Method jsonRPCClient::__construct($url) 
 
 Creates a new jsonRPCClient object binding it to a JSON-RPC server.
 
@@ -75,7 +75,7 @@ returns a jsonRPCClient object.
      ?>
 
 
-#### Method jsonRPCClient::__call() 
+#### Method jsonRPCClient::__call($params) 
 
 In PHP this is triggered  when invoking inaccessible methods in a object context. Loads any called method in the appropiate method of the ``JSON-RPC`` server, forwarding the given parameters. Whatever be the called method for the ``jsonRPCClient`` object, 
 ``__call()`` converts it in the JSON-RPC method with same name. The parameters also are forwarded in a fully transparent way. ``__call()`` is a magic method, it must NOT be called with its own name. It collect every method called, converting them in the ``JSON-RPC`` form.
