@@ -134,3 +134,21 @@ Sets the internal state of the object, to determine whether the requests are sen
 
 #### Example:
 
+     <?php
+     require_once('jsonRPCClient.php');
+     $client  = new jsonRPCClient('http://aldovet.ro/json-rpc-php/server.php');
+     try {
+          $client->setRPCNotification(true);
+          echo$client->getTweets('thinkphp',5,true); 
+          $client->setRPCNotification(false);
+          echo($client->deliciousbadge('thinkphp',10,'javascript'));
+     }catch(Exception $e) {
+          echo$e->getMessage(); 
+     } 
+     ?>
+
+Note: 
+
+  In the method's requests there isn't a parameter indicating if the request must be of  the notification form, i.e. with no response. As default, every request is a request expecting a response.
+  For these reasons, ``setRPCNotification`` method has been prepared as a separated switch, to be intended as a state modifier.
+
