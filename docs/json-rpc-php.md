@@ -5,7 +5,7 @@ The trated themes require the knowledge of the [specification of the JSON-RPC 1.
 
 ## class jsonRPCServer
 
-The ``jsonRPCServer`` class contains only one static method ``jsonRPCServer::handle()``, responding to the JSON-RPC requests.
+The ``jsonRPCServer`` class contains only one public static method ``public static function handle($obj)``, responding to the JSON-RPC requests.
 
 ### Syntax:
 
@@ -41,12 +41,12 @@ The JSON-RPC protocol contains a simple and full management system rightly to th
 
 The ``jsonRPCClient`` contains three public methods:
 
-* ``jsonRPCClient->__construct()`` - the constructor of client class.
-* ``jsonRPCClient->__call()`` - forwarding the requests to the JSON-RPC server
-* ``jsonRPCClient->setRPCNotification()`` - to establish whether the requests are normal requests or notifications.
+* ``jsonRPCClient::__construct()`` - the constructor of client class.
+* ``jsonRPCClient::__call()`` - forwarding the requests to the JSON-RPC server
+* ``jsonRPCClient::setRPCNotification()`` - to establish whether the requests are normal requests or notifications.
 
 
-### method jsonRPCClient->__construct() 
+### Method jsonRPCClient::__construct() 
 
 Creates a new jsonRPCClient object binding it to a JSON-RPC server.
 
@@ -75,7 +75,7 @@ returns a jsonRPCClient object.
      ?>
 
 
-#### method jsonRPCClient->__call() 
+#### Method jsonRPCClient::__call() 
 
 In PHP this is triggered  when invoking inaccessible methods in a object context. Loads any called method in the appropiate method of the ``JSON-RPC`` server, forwarding the given parameters. Whatever be the called method for the ``jsonRPCClient`` object, 
 ``__call()`` converts it in the JSON-RPC method with same name. The parameters also are forwarded in a fully transparent way. ``__call()`` is a magic method, it must NOT be called with its own name. It collect every method called, converting them in the ``JSON-RPC`` form.
@@ -112,11 +112,11 @@ Returns the structured value given by the called method. If the method is called
 #### Note:
 
 Keep in mind the example: the ``__call()`` method isn't called explicitely. Instead, methods that aren't between the explicitely declared methods of the class are called. These are the JSON-RPC server's methods. ``__call()`` method collect  every method
-request not coresponding to any explicitely declared method of the class and manage it as JSON-RPC request. The parameters too are given as the JSON-RPC method requires, where __call() will package them in an array.
+request not coresponding to any explicitely declared method of the class and manage it as JSON-RPC request. The parameters too are given as the JSON-RPC method requires, where ``__call()`` will package them in an array.
 In this way, the magic method ``__call()`` charges on itself the requests and acts as a proxy to the JSON-RPC server.
 
 
-### method jsonRPCClient->setRPCNotifications()
+### Method jsonRPCClient::setRPCNotifications()
 
 Sets the internal state of the object, to determine whether the requests are sent as normal requests or notifications.
 
