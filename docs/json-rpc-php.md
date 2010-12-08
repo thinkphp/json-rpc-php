@@ -77,8 +77,8 @@ returns a jsonRPCClient object.
 
 #### method jsonRPCClient->__call() 
 
-In PHP this is triggered  when invoking inaccessible methods in a object context. Loads any called method in the appropiate method of the JSON-RPC server, forwarding the given parameters. Whatever be the called method for the ``jsonRPCClient`` object, 
-__call() converts it in the JSON-RPC method with same name. The parameters also are forwarded in a fully transparent way. __call*() is a magic method, it must NOT be called with its own name. It collect every method called, converting them in the JSON-RPC form.
+In PHP this is triggered  when invoking inaccessible methods in a object context. Loads any called method in the appropiate method of the ``JSON-RPC`` server, forwarding the given parameters. Whatever be the called method for the ``jsonRPCClient`` object, 
+``__call()`` converts it in the JSON-RPC method with same name. The parameters also are forwarded in a fully transparent way. ``__call()`` is a magic method, it must NOT be called with its own name. It collect every method called, converting them in the ``JSON-RPC`` form.
 
 #### Syntax:
       

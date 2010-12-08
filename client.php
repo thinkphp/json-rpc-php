@@ -25,7 +25,7 @@ $arr = array(99,22,33,44,11,55,77);
 try {
     //echo($client->deliciousbadge('codepo8',10,'4ydn'));
     //echo($client->produit_cartesien(2,4,2));      
-      echo$client->getTweets('codepo8',10,true); 
+      echo$client->getTweets('thinkphp',10,true); 
 }catch(Exception $e) {
     echo$e->getMessage(); 
 }
