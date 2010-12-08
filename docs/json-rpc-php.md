@@ -50,7 +50,7 @@ The ``jsonRPCClient`` contains three public methods:
 
 Constructor of class. Creates a new jsonRPCClient object binding it to a JSON-RPC server.
 
-#### Syntax:
+#### Description:
       
      <?php
      class jsonRPCClient {
@@ -58,14 +58,14 @@ Constructor of class. Creates a new jsonRPCClient object binding it to a JSON-RP
      }
      ?>
 
-#### Arguments:
+#### Parameters:
 
 ``$url`` (*String*) - the JSON-RPC service's URL
 ``$debug`` (*boolean*, default to 'false') - if 'true' then output on the stdout the dialog between client and server.
 
-#### Return:
+#### Return values:
 
-returns a jsonRPCClient object.
+Returns a jsonRPCClient object.
 
 #### Example:
 
