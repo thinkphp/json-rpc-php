@@ -93,7 +93,7 @@ In PHP this is triggered  when invoking inaccessible methods in a object context
 * ``$method`` (*String*) - the name of the remote required method.
 * ``$params`` (*Array*) - the parameters set packaged as an array for remote method.
 
-#### Return:
+#### Return values:
 
 Returns the structured value given by the called method. If the method is called as a notification then return TRUE.
 
@@ -120,17 +120,21 @@ In this way, the magic method ``__call()`` charges on itself the requests and ac
 
 Sets the internal state of the object, to determine whether the requests are sent as normal requests or notifications.
 
-#### Syntax: 
+#### Description: 
 
      <?php
         class jsonRPCClient {
-              void setRPCNotification(boolean $notification)  
+              boolean setRPCNotification(boolean $notification)  
         }
      ?>
 
-#### Arguments:
+#### Parameters:
 
 * ``$notification`` (*boolean*) - a boolean value that should be TRUE if the request must be notification, else FALSE if the request must have a response.
+
+#### Return values:
+
+* return ``true``.
 
 #### Example:
 
