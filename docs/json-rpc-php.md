@@ -116,7 +116,7 @@ request not coresponding to any explicitely declared method of the class and man
 In this way, the magic method ``__call()`` charges on itself the requests and acts as a proxy to the JSON-RPC server.
 
 
-### Method jsonRPCClient::setRPCNotifications()
+### Method jsonRPCClient::setRPCNotification()
 
 Sets the internal state of the object, to determine whether the requests are sent as normal requests or notifications.
 
@@ -124,7 +124,7 @@ Sets the internal state of the object, to determine whether the requests are sen
 
      <?php
         class jsonRPCClient {
-              void setRPCNotifications(boolean $notification)  
+              void setRPCNotification(boolean $notification)  
         }
      ?>
 
