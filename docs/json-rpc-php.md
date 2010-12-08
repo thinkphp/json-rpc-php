@@ -46,9 +46,9 @@ The ``jsonRPCClient`` contains three public methods:
 * ``jsonRPCClient::setRPCNotification($bool)`` - to establish whether the requests are normal requests or notifications.
 
 
-### Method jsonRPCClient::__construct($url) 
+### method public jsonRPCClient::__construct($url) 
 
-Creates a new jsonRPCClient object binding it to a JSON-RPC server.
+Constructor of class. Creates a new jsonRPCClient object binding it to a JSON-RPC server.
 
 #### Syntax:
       
@@ -75,7 +75,7 @@ returns a jsonRPCClient object.
      ?>
 
 
-#### Method jsonRPCClient::__call($params) 
+#### method public jsonRPCClient::__call($method, $params) 
 
 In PHP this is triggered  when invoking inaccessible methods in a object context. Loads any called method in the appropiate method of the ``JSON-RPC`` server, forwarding the given parameters. Whatever be the called method for the ``jsonRPCClient`` object, 
 ``__call()`` converts it in the JSON-RPC method with same name. The parameters also are forwarded in a fully transparent way. ``__call()`` is a magic method, it must NOT be called with its own name. It collect every method called, converting them in the ``JSON-RPC`` form.
@@ -116,7 +116,7 @@ request not coresponding to any explicitely declared method of the class and man
 In this way, the magic method ``__call()`` charges on itself the requests and acts as a proxy to the JSON-RPC server.
 
 
-### Method jsonRPCClient::setRPCNotification($bool)
+### method public jsonRPCClient::setRPCNotification($bool)
 
 Sets the internal state of the object, to determine whether the requests are sent as normal requests or notifications.
 
