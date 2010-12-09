@@ -55,7 +55,7 @@ Creates a new jsonRPCClient object binding it to a JSON-RPC server.
 
 #### Description:
       
-     object __construct($url [, boolean $debug]);
+     void __construct($url [, boolean $debug]);
 
 #### Parameters:
 
