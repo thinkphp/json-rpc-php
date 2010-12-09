@@ -5,21 +5,22 @@ The trated themes require the knowledge of the [specification of the JSON-RPC 1.
 
 ## class jsonRPCServer
 
-The ``jsonRPCServer`` class contains only one static method ``public static function handle($obj)``, responding to the JSON-RPC requests.
+The ``jsonRPCServer`` class contains only one static method, responding to the ``JSON-RPC`` requests.
 
-### Description:
-
-    boolean jsonRPCServer::handle(object $object)
-
+### Method public static jsonRPCServer::handle($obj);
 
 Collect a valid JSON-RPC request and search the appropriate method in object, using the request's parameters as method parameters. The response is given as JSON-RPC response.
 The request is valid if it is a POST request and if it has a ``content-type: applicatin/json``. Either if the request if invalid or if it a notification, no response will be given to the JSON-RPC client.
+
+### Description:
+
+    boolean handle(object $object)
 
 #### Paramters:
 
 * ``$object`` (*Object*) - the object whom the JSON-RPC request will be forwarded to.
 
-#### Return values:
+#### Return:
 
 * ``boolean`` returns ``TRUE`` if the ``JSON-RPC`` request is well-formated (i.e. a POST request with ``content-type: application/json``). Otherwise, returns  ``FALSE`` to the main program and don't give a response to the JSON-RPC client.
 
@@ -49,22 +50,19 @@ The ``jsonRPCClient`` contains three public methods:
 
 ### method public jsonRPCClient::__construct($url) 
 
-Constructor of class. Creates a new jsonRPCClient object binding it to a JSON-RPC server.
+Default constructor of class.
+Creates a new jsonRPCClient object binding it to a JSON-RPC server.
 
 #### Description:
       
-     <?php
-     class jsonRPCClient {
-           public function __construct($url [, boolean $debug]);
-     }
-     ?>
+     object __construct($url [, boolean $debug]);
 
 #### Parameters:
 
 ``$url`` (*String*) - the JSON-RPC service's URL
 ``$debug`` (*boolean*, default to 'false') - if 'true' then output on the stdout the dialog between client and server.
 
-#### Return values:
+#### Return:
 
 Returns a jsonRPCClient object.
 
@@ -83,18 +81,14 @@ In PHP this is triggered  when invoking inaccessible methods in a object context
 
 #### Syntax:
       
-     <?php
-     class jsonRPCClient {
-           mixed function __call(String $method, array $params);
-     }
-     ?>
+     mixed function __call(String $method, array $params);
 
 ##### Arguments:
 
 * ``$method`` (*String*) - the name of the remote required method.
 * ``$params`` (*Array*) - the parameters set packaged as an array for remote method.
 
-#### Return values:
+#### Return:
 
 Returns the structured value given by the called method. If the method is called as a notification then return TRUE.
 
@@ -123,17 +117,14 @@ Sets the internal state of the object, to determine whether the requests are sen
 
 #### Description: 
 
-     <?php
-        class jsonRPCClient {
-              boolean setRPCNotification(boolean $notification)  
-        }
-     ?>
+     boolean setRPCNotification(boolean $notification)  
+  
 
 #### Parameters:
 
 * ``$notification`` (*boolean*) - a boolean value that should be TRUE if the request must be notification, else FALSE if the request must have a response.
 
-#### Return values:
+#### Return:
 
 * return ``true``.
 
